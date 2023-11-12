@@ -15,9 +15,6 @@
     "symfony/dotenv": "^6.2",
     "ryangjchandler/standalone-blade": "^0.2.0"
   },
-  "require-dev": {
-    "symfony/var-dumper": "^6.3"
-  },
   "autoload": {
     "psr-4": {
       "Plutuss\\SauceCore\\": "src/"
