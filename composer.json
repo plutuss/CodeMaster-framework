@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Plutuss\\SauceCore": "src/"
+      "Plutuss\\SauceCore\\": "src/"
     }
   },
   "files": [
