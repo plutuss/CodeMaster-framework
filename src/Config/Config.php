@@ -27,6 +27,6 @@ class Config implements ConfigInterface
      */
     private function getPathConfig(string $file): string
     {
-        return APP_DIR . "/../config/{$file}.php";
+        return root_dir() . "/../config/{$file}.php";
     }
 }

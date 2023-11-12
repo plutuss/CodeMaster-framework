@@ -135,3 +135,11 @@ if (!function_exists('config')) {
         return (new Config)->get($path);
     }
 }
+
+if (!function_exists('root_dir')) {
+
+    function root_dir()
+    {
+        return  APP_DIR;
+    }
+}
