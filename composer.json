@@ -1,0 +1,33 @@
+{
+  "name": "plutuss/sauce-core",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "plutuss",
+      "email": "dima92konovalenko@gmail.com",
+      "homepage": "https://github.com/plutuss"
+    }
+  ],
+  "require": {
+    "php": "8.0|^8.2",
+    "ext-http": "*",
+    "ext-pdo": "*",
+    "ext-dom": "*",
+    "ext-curl": "*",
+    "symfony/dotenv": "^6.2",
+    "ryangjchandler/standalone-blade": "^0.2.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Plutuss\\SauceCore": "src/"
+    }
+  },
+  "files": [
+    "src/Helpers/main.php"
+  ]
+}
