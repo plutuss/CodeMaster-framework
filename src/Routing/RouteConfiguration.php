@@ -8,7 +8,7 @@ class RouteConfiguration implements RouteConfigurationInterface
 {
     public function __construct(
         public string       $route,
-        public string       $controller,
+        public              $controller,
         public string|null  $action = null,
         public string|array $middleware = '',
         public string       $name = '',
