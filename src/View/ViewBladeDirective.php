@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 namespace Plutuss\SauceCore\View;
 
-use Plutuss\SauceCore\Config\Config;
+use Plutuss\SauceCore\Config\ConfigInterface;
 use RyanChandler\Blade\Blade;
 use App\View\Directive;
 
@@ -13,8 +13,8 @@ class ViewBladeDirective implements ViewBladeDirectiveInterface
 {
 
     public function __construct(
-        private Blade  $blade,
-        private Config $config,
+        private Blade           $blade,
+        private ConfigInterface $config,
     )
     {
     }
@@ -31,7 +31,7 @@ class ViewBladeDirective implements ViewBladeDirectiveInterface
 
         if (!empty($directive)) {
             foreach ($directive as $class) {
-                call_user_func([new $class($this->blade), 'handler']);
+                call_user_func([new $class($this->blade, $this->config), 'handler']);
             }
         }
 
