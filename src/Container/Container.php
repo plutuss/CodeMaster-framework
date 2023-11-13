@@ -6,8 +6,6 @@ declare(strict_types=1);
 namespace Plutuss\SauceCore\Container;
 
 
-
-
 use Plutuss\SauceCore\Auth\Auth;
 use Plutuss\SauceCore\Builder\QueryBuilder;
 use Plutuss\SauceCore\Config\Config;
@@ -59,7 +57,7 @@ readonly class Container
         $this->validator = new Validator();
         $this->request->setValidator($this->validator);
         $this->request->setSession($this->session);
-        $this->viewBladeDirective = new ViewBladeDirective($this->blade);
+        $this->viewBladeDirective = new ViewBladeDirective($this->blade, $this->config);
         $this->view = new View($this->session, $this->blade, $this->viewBladeDirective);
         $this->database = new Database($this->config);
         $this->auth = new Auth($this->session, $this->config);

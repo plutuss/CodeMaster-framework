@@ -3,22 +3,39 @@
 declare(strict_types=1);
 
 
-namespace  Plutuss\SauceCore\View;
+namespace Plutuss\SauceCore\View;
 
+use Plutuss\SauceCore\Config\Config;
 use RyanChandler\Blade\Blade;
 use App\View\Directive;
+
 class ViewBladeDirective implements ViewBladeDirectiveInterface
 {
 
     public function __construct(
-        private Blade $blade,
+        private Blade  $blade,
+        private Config $config,
     )
     {
     }
 
-    public function handler()
+
+    private function getAllDirectiveFromArray(): array
     {
-        (new Directive($this->blade))->handler();
+        return $this->config->get('view.directive');
+    }
+
+    public function handler(): void
+    {
+        $directive = $this->getAllDirectiveFromArray();
+
+        if (!empty($directive)) {
+            foreach ($directive as $class) {
+                call_user_func([new $class($this->blade), 'handler']);
+            }
+        }
+
+
     }
 
 
