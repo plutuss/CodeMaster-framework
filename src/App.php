@@ -16,6 +16,9 @@ class App
         $this->container = new Container();
     }
 
+    /**
+     * @return void
+     */
     public function run(): void
     {
         $this->container

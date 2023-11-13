@@ -6,6 +6,7 @@ declare(strict_types=1);
 namespace  Plutuss\SauceCore\Http\Request;
 
 use Plutuss\SauceCore\Session\SessionInterface;
+use Plutuss\SauceCore\Upload\UploadedFileInterface;
 use Plutuss\SauceCore\Validator\ValidatorInterface;
 
 class Request implements RequestInterface
@@ -68,8 +69,11 @@ class Request implements RequestInterface
     }
 
 
-
-    public function file(string $key): ?\Plutuss\SauceCore\Upload\UploadedFileInterface
+    /**
+     * @param string $key
+     * @return UploadedFileInterface|null
+     */
+    public function file(string $key): ?UploadedFileInterface
     {
         if (!isset($this->files[$key])) {
             return null;
@@ -84,6 +88,10 @@ class Request implements RequestInterface
         );
     }
 
+    /**
+     * @param ValidatorInterface $validator
+     * @return void
+     */
     public function setValidator(ValidatorInterface $validator): void
     {
         $this->validator = $validator;

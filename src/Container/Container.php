@@ -46,6 +46,9 @@ readonly class Container
         $this->registerServices();
     }
 
+    /**
+     * @return void
+     */
     private function registerServices(): void
     {
         $this->config = new Config();

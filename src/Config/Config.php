@@ -6,6 +6,11 @@ use const Plutuss\SauceCore\Config\APP_DIR;
 
 class Config implements ConfigInterface
 {
+    /**
+     * @param string $key
+     * @param $default
+     * @return mixed
+     */
     public function get(string $key, $default = null): mixed
     {
         [$file, $key] = explode('.', $key);

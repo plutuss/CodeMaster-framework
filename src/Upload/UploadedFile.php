@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 
-namespace  Plutuss\SauceCore\Upload;
+namespace Plutuss\SauceCore\Upload;
 
-readonly class UploadedFile implements UploadedFileInterface
+class UploadedFile implements UploadedFileInterface
 {
 
     public function __construct(
@@ -14,9 +14,15 @@ readonly class UploadedFile implements UploadedFileInterface
         public string $tmpName,
         public int    $error,
         public int    $size,
-    ) {
+    )
+    {
     }
 
+    /**
+     * @param string $path
+     * @param string|null $fileName
+     * @return string|false
+     */
     public function move(string $path, string $fileName = null): string|false
     {
         $storagePath = APP_DIR . "/storage/$path";
@@ -36,17 +42,26 @@ readonly class UploadedFile implements UploadedFileInterface
         return false;
     }
 
+    /**
+     * @return string
+     */
     private function randomFileName(): string
     {
         return md5(uniqid((string)rand(), true)) . ".{$this->getExtension()}";
     }
 
 
+    /**
+     * @return string
+     */
     public function getExtension(): string
     {
         return pathinfo($this->name, PATHINFO_EXTENSION);
     }
 
+    /**
+     * @return bool
+     */
     public function hasError(): bool
     {
         return $this->error !== UPLOAD_ERR_OK;

@@ -8,6 +8,11 @@ class   Validator implements ValidatorInterface
 
     private array $data;
 
+    /**
+     * @param array $data
+     * @param array $rules
+     * @return bool
+     */
     public function validate(array $data, array $rules): bool
     {
         $this->errors = [];
@@ -42,11 +47,20 @@ class   Validator implements ValidatorInterface
         return [];
     }
 
+    /**
+     * @return array
+     */
     public function errors(): array
     {
         return $this->errors;
     }
 
+    /**
+     * @param string $key
+     * @param string $ruleName
+     * @param string|null $ruleValue
+     * @return string|false
+     */
     private function validateRule(string $key, string $ruleName, string $ruleValue = null): string|false
     {
         $value = $this->data[$key];

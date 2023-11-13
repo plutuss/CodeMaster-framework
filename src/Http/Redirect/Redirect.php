@@ -21,6 +21,9 @@ class Redirect implements RedirectInterface
         self::$request = $request;
     }
 
+    /**
+     * @return static
+     */
     public static function getInstance(): static
     {
         if (null === static::$instance) {
@@ -29,12 +32,19 @@ class Redirect implements RedirectInterface
         return static::$instance;
     }
 
+    /**
+     * @param string $url
+     * @return void
+     */
     public function to(string $url)
     {
         header("Location: {$url}");
         exit();
     }
 
+    /**
+     * @return void
+     */
     public function back(): void
     {
         $url = self::$request->url();

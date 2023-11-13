@@ -6,14 +6,12 @@ declare(strict_types=1);
 namespace Plutuss\SauceCore\Builder;
 
 
-
 use Plutuss\SauceCore\Database\Database;
 use Plutuss\SauceCore\Exceptions\NotFoundException;
 use Plutuss\SauceCore\Model\Model;
 
 class QueryBuilder extends Database implements QueryBuilderInterface
 {
-    // https://github.com/plutuss/laravel-copy-cms/tree/master/app/Core/Builder
 
     /**
      * @var array<string>
@@ -62,6 +60,10 @@ class QueryBuilder extends Database implements QueryBuilderInterface
     }
 
 
+    /**
+     * @param array $data
+     * @return int|false
+     */
     public function insert(array $data): int|false
     {
         $fields = array_keys($data);
@@ -111,7 +113,10 @@ class QueryBuilder extends Database implements QueryBuilderInterface
     }
 
 
-
+    /**
+     * @return Model
+     * @throws NotFoundException
+     */
     public function first(): Model
     {
         $where = '';
@@ -168,7 +173,6 @@ class QueryBuilder extends Database implements QueryBuilderInterface
 
         $stmt = $this->pdo->prepare($query);
         $stmt->execute($this->conditions);
-//        $stmt->execute([]);
 
         $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
@@ -225,6 +229,10 @@ class QueryBuilder extends Database implements QueryBuilderInterface
         return $this;
     }
 
+    /**
+     * @param string ...$select
+     * @return $this
+     */
     public function select(string ...$select): self
     {
         foreach ($select as $arg) {
@@ -285,6 +293,11 @@ class QueryBuilder extends Database implements QueryBuilderInterface
         return $this;
     }
 
+    /**
+     * @param string $table
+     * @param string|null $alias
+     * @return $this
+     */
     public function from(string $table, ?string $alias = null): self
     {
         $this->from[] = $alias === null ? $table : "${table} AS ${alias}";

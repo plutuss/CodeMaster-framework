@@ -8,6 +8,11 @@ namespace  Plutuss\SauceCore\Support;
 
 class Str
 {
+    /**
+     * @param string $text
+     * @param string $divider
+     * @return string
+     */
     public static function slug(string $text, string $divider = '-'): string
     {
         // replace non letter or digits by divider

@@ -65,11 +65,17 @@ class Route
     }
 
 
+    /**
+     * @return string
+     */
     public function getUrl(): string
     {
         return $this->url;
     }
 
+    /**
+     * @return string
+     */
     public function getMethod(): string
     {
         return $this->method;
@@ -84,6 +90,11 @@ class Route
     }
 
 
+    /**
+     * @param string|null $method
+     * @param bool $withKey
+     * @return array|array[]
+     */
     public static function getRoutes(string $method = null, bool $withKey = true): array
     {
         if (empty($method)) {

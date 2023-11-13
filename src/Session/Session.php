@@ -75,6 +75,9 @@ class Session implements SessionInterface
         unset($this->session[$key]);
     }
 
+    /**
+     * @return void
+     */
     public function destroy(): void
     {
         session_destroy();

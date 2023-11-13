@@ -6,9 +6,10 @@ declare(strict_types=1);
 namespace Plutuss\SauceCore\Auth;
 
 use Plutuss\SauceCore\Config\ConfigInterface;
+use Plutuss\SauceCore\Model\Model;
 use Plutuss\SauceCore\Session\SessionInterface;
 
-readonly class Auth implements AuthInterface
+class Auth implements AuthInterface
 {
 
     public function __construct(
@@ -20,13 +21,15 @@ readonly class Auth implements AuthInterface
     }
 
     /**
-     * @param string $email
+     * @param string $username
      * @param string $password
      * @return bool
      */
-    public function attempt(string $email, string $password): bool
+    public function attempt(string $username, string $password): bool
     {
-        $user = \App\Models\User::query()->where(['username' => $email])->first();
+        $user = \App\Models\User::query()
+            ->where([$this->username() => $username])
+            ->first();
 
         if (!$user) {
             return false;
@@ -39,6 +42,9 @@ readonly class Auth implements AuthInterface
 
     }
 
+    /**
+     * @return bool
+     */
     public function check(): bool
     {
         return $this->session->has(
@@ -46,6 +52,9 @@ readonly class Auth implements AuthInterface
         );
     }
 
+    /**
+     * @return Model
+     */
     public function user(): \Plutuss\SauceCore\Model\Model
     {
         $id = $this->session->get(
@@ -54,31 +63,49 @@ readonly class Auth implements AuthInterface
         return \App\Models\User::query()->find($id);
     }
 
+    /**
+     * @return void
+     */
     public function logout(): void
     {
         $this->session->remove($this->sessionField());
     }
 
-    public function table(): string
+    /**
+     * @return string
+     */
+    private function table(): string
     {
         return $this->config->get('auth.table', 'users');
     }
 
-    public function username(): string
+    /**
+     * @return string
+     */
+    private function username(): string
     {
         return $this->config->get('auth.username', 'email');
     }
 
-    public function password(): string
+    /**
+     * @return string
+     */
+    private function password(): string
     {
         return $this->config->get('auth.password', 'password');
     }
 
-    public function sessionField(): string
+    /**
+     * @return string
+     */
+    private function sessionField(): string
     {
         return $this->config->get('auth.session_field', 'user_id');
     }
 
+    /**
+     * @return int|null
+     */
     public function id(): ?int
     {
         return $this->session->get($this->sessionField());

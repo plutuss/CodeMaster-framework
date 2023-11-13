@@ -1,6 +1,6 @@
 <?php
 
-namespace  Plutuss\SauceCore\View;
+namespace Plutuss\SauceCore\View;
 
 interface ViewInterface
 {
