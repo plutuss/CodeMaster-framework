@@ -7,22 +7,16 @@ use Plutuss\SauceCore\Routing\Router;
 use Plutuss\SauceCore\Session\Session;
 use Plutuss\SauceCore\Support\Str;
 
-if (!function_exists('env')) {
+if (!function_exists('envt')) {
     /**
      * @param string $name
      * @param $default
      * @return mixed
      */
-    function env(string $name, $default = null): mixed
+    function envt(string $name, $default = null): mixed
     {
-        try {
-            return $_ENV[name] ?? $default;
-        } catch (Exception $e) {
-            return $default;
-        }
-
+        return $_ENV[$name] ?? $default;
     }
-
 }
 
 if (!function_exists('route')) {
