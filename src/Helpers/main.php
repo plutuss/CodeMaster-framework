@@ -16,7 +16,7 @@ if (!function_exists('env')) {
     function env(string $name, $default = null): mixed
     {
         try {
-            return getenv($name);
+            return $_ENV[name] ?? $default;
         } catch (Exception $e) {
             return $default;
         }
@@ -140,6 +140,6 @@ if (!function_exists('root_dir')) {
 
     function root_dir()
     {
-        return  APP_DIR;
+        return APP_DIR;
     }
 }
