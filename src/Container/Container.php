@@ -81,8 +81,12 @@ readonly class Container
 
     private function configureEnvironment(): void
     {
+        $path = root_dir() . '/../.env';
+        if (!file_exists($path)) {
+            die('Not found .env');
+        }
         $this->dotenv = new Dotenv();
-        $this->dotenv->loadEnv(APP_DIR . '/../.env');
+        $this->dotenv->loadEnv($path);
     }
 
 
@@ -90,6 +94,6 @@ readonly class Container
     {
         $views = $this->config->get('view.path_view');
         $cache = $this->config->get('view.path_cache');
-        $this->blade = new Blade(APP_DIR . "/../" . $views, APP_DIR . "/../" . $cache);
+        $this->blade = new Blade(root_dir() . "/../" . $views, root_dir() . "/../" . $cache);
     }
 }
