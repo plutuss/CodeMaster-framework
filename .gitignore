@@ -6,6 +6,7 @@
 #/storage
 /vendor
 .env
+
 .env.example.my
 .env.backup
 .phpunit.result.cache
