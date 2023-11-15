@@ -18,15 +18,16 @@ class MakeController extends Command
 
     public function defaultContent()
     {
-        $this->content = "<?php
+        $this->content = "
+<?php
 
-                    namespace App\Http\Controllers;
-                    
-                    
-                    class {$this->filename} extends Controller
-                    {
-                  
-                    }";
+namespace App\Http\Controllers;
+
+
+class {$this->filename} extends Controller
+{
+
+}";
 
         return $this;
 
