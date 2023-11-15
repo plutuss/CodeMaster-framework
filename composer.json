@@ -1,6 +1,6 @@
 {
   "name": "plutuss/sauce-core",
-  "description": "description",
+  "description": "The Sauce Framework.",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [

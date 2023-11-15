@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 namespace Plutuss\SauceCore\Console;
 
 use Symfony\Component\Console\Application;
