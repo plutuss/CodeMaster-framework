@@ -16,10 +16,13 @@ class MakeController extends Command
 
     use TraitMakeCommand;
 
-    public function defaultContent()
+    /**
+     * @return $this
+     */
+    public function defaultContent(): static
     {
-        $this->content = "
-<?php
+        $this->content =
+            "<?php
 
 namespace App\Http\Controllers;
 
@@ -33,12 +36,15 @@ class {$this->filename} extends Controller
 
     }
 
+    /**
+     * @return bool
+     */
     protected function checkFileExists(): bool
     {
         return file_exists($this->path);
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this->setName('make:controller')
             ->setDescription('Make new controller')
@@ -46,6 +52,11 @@ class {$this->filename} extends Controller
             ->addArgument('name', InputArgument::REQUIRED, 'Pass a name for the controller');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return mixed
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $this->filename = $input->getArgument('name');

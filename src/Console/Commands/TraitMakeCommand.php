@@ -15,6 +15,10 @@ trait TraitMakeCommand
     protected string $filename;
 
 
+    /**
+     * @param string $filename
+     * @return $this
+     */
     public function setFilename(string $filename): static
     {
         $this->filename = $filename;
@@ -22,13 +26,20 @@ trait TraitMakeCommand
     }
 
 
-    public function createFile()
+    /**
+     * @return void
+     */
+    public function createFile(): void
     {
         $file = fopen($this->path, "wb");
         fwrite($file, $this->content);
         fclose($file);
     }
 
+    /**
+     * @param string $namespace
+     * @return string
+     */
     public function getPath(string $namespace): string
     {
         $this->path = app_path_from_console() . "{$namespace}{$this->filename}.php";

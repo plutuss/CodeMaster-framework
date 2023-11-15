@@ -9,7 +9,8 @@ use Plutuss\SauceCore\Console\Commands\Make\MakeController;
 class DefaultCommand
 {
 
-    public function listCommand()
+
+    public function listCommand(): array
     {
         return [
             MakeController::class,
