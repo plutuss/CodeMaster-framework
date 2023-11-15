@@ -137,3 +137,10 @@ if (!function_exists('root_dir')) {
         return APP_DIR;
     }
 }
+if (!function_exists('app_path')) {
+
+    function app_path()
+    {
+        return root_dir() . '/../app';
+    }
+}
