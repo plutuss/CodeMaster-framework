@@ -144,3 +144,11 @@ if (!function_exists('app_path')) {
         return root_dir() . '/../app';
     }
 }
+
+if (!function_exists('app_path_from_console')) {
+
+    function app_path_from_console()
+    {
+        return $_SERVER['PWD'] . '/app';
+    }
+}

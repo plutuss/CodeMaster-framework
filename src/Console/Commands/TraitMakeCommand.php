@@ -31,7 +31,7 @@ trait TraitMakeCommand
 
     public function getPath(string $namespace): string
     {
-        $this->path = app_path() . "{$namespace}{$this->filename}.php";
+        $this->path = app_path_from_console() . "{$namespace}{$this->filename}.php";
         return $this->path;
     }
 
