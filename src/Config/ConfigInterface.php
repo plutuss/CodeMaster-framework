@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutuss\SauceCore\Config;
+namespace Plutuss\CodeMaster\Config;
 
 interface ConfigInterface
 {

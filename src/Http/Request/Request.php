@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 
-namespace  Plutuss\SauceCore\Http\Request;
+namespace  Plutuss\CodeMaster\Http\Request;
 
-use Plutuss\SauceCore\Session\SessionInterface;
-use Plutuss\SauceCore\Upload\UploadedFileInterface;
-use Plutuss\SauceCore\Validator\ValidatorInterface;
+use Plutuss\CodeMaster\Session\SessionInterface;
+use Plutuss\CodeMaster\Upload\UploadedFileInterface;
+use Plutuss\CodeMaster\Validator\ValidatorInterface;
 
 class Request implements RequestInterface
 {

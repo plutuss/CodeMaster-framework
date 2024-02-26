@@ -1,10 +1,10 @@
 <?php
 
-namespace Plutuss\SauceCore\Builder;
+namespace Plutuss\CodeMaster\Builder;
 
 
 
-use Plutuss\SauceCore\Model\Model;
+use Plutuss\CodeMaster\Model\Model;
 
 interface QueryBuilderInterface
 {

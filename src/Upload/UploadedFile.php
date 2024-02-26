@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Upload;
+namespace Plutuss\CodeMaster\Upload;
 
 class UploadedFile implements UploadedFileInterface
 {

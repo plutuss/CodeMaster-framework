@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Console\Commands\Make;
+namespace Plutuss\CodeMaster\Console\Commands\Make;
 
-use Plutuss\SauceCore\Console\Commands\TraitMakeCommand;
+use Plutuss\CodeMaster\Console\Commands\TraitMakeCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

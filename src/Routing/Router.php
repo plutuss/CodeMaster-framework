@@ -3,15 +3,15 @@
 declare(strict_types=1);
 
 
-namespace  Plutuss\SauceCore\Routing;
+namespace  Plutuss\CodeMaster\Routing;
 
-use Plutuss\SauceCore\Auth\AuthInterface;
-use Plutuss\SauceCore\Config\ConfigInterface;
-use Plutuss\SauceCore\Http\Middleware\AbstractMiddleware;
-use Plutuss\SauceCore\Http\Redirect\RedirectInterface;
-use Plutuss\SauceCore\Http\Request\RequestInterface;
-use Plutuss\SauceCore\Session\SessionInterface;
-use Plutuss\SauceCore\View\ViewInterface;
+use Plutuss\CodeMaster\Auth\AuthInterface;
+use Plutuss\CodeMaster\Config\ConfigInterface;
+use Plutuss\CodeMaster\Http\Middleware\AbstractMiddleware;
+use Plutuss\CodeMaster\Http\Redirect\RedirectInterface;
+use Plutuss\CodeMaster\Http\Request\RequestInterface;
+use Plutuss\CodeMaster\Session\SessionInterface;
+use Plutuss\CodeMaster\View\ViewInterface;
 
 class Router implements RouterInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace  Plutuss\SauceCore\Storage;
+namespace  Plutuss\CodeMaster\Storage;
 
 interface StorageInterface
 {

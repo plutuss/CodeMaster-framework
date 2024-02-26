@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Console;
+namespace Plutuss\CodeMaster\Console;
 
-use Plutuss\SauceCore\Console\Commands\DefaultCommand;
+use Plutuss\CodeMaster\Console\Commands\DefaultCommand;
 use Symfony\Component\Console\Application;
 
 class Console

@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Auth;
+namespace Plutuss\CodeMaster\Auth;
 
-use Plutuss\SauceCore\Config\ConfigInterface;
-use Plutuss\SauceCore\Model\Model;
-use Plutuss\SauceCore\Session\SessionInterface;
+use Plutuss\CodeMaster\Config\ConfigInterface;
+use Plutuss\CodeMaster\Model\Model;
+use Plutuss\CodeMaster\Session\SessionInterface;
 
 class Auth implements AuthInterface
 {
@@ -55,7 +55,7 @@ class Auth implements AuthInterface
     /**
      * @return Model
      */
-    public function user(): \Plutuss\SauceCore\Model\Model
+    public function user(): \Plutuss\CodeMaster\Model\Model
     {
         $id = $this->session->get(
             $this->sessionField()

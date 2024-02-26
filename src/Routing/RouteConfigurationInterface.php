@@ -1,6 +1,6 @@
 <?php
 
-namespace  Plutuss\SauceCore\Routing;
+namespace  Plutuss\CodeMaster\Routing;
 
 interface RouteConfigurationInterface
 {

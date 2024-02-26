@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Database;
+namespace Plutuss\CodeMaster\Database;
 
 
 
 
-use Plutuss\SauceCore\Config\ConfigInterface;
+use Plutuss\CodeMaster\Config\ConfigInterface;
 
 class Database implements DatabaseInterface
 {

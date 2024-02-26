@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\View;
+namespace Plutuss\CodeMaster\View;
 
-use Plutuss\SauceCore\Config\ConfigInterface;
+use Plutuss\CodeMaster\Config\ConfigInterface;
 use RyanChandler\Blade\Blade;
 use App\View\Directive;
 

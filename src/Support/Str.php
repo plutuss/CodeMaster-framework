@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace  Plutuss\SauceCore\Support;
+namespace  Plutuss\CodeMaster\Support;
 
 
 class Str

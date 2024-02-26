@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutuss\SauceCore\Upload;
+namespace Plutuss\CodeMaster\Upload;
 
 interface UploadedFileInterface
 {

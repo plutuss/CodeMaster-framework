@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Plutuss\SauceCore\Console\Commands;
+namespace Plutuss\CodeMaster\Console\Commands;
 
-use Plutuss\SauceCore\Console\Commands\Make\MakeController;
+use Plutuss\CodeMaster\Console\Commands\Make\MakeController;
 
 class DefaultCommand
 {

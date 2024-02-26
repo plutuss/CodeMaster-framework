@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutuss\SauceCore\Http\Redirect;
+namespace Plutuss\CodeMaster\Http\Redirect;
 
 interface RedirectInterface
 {

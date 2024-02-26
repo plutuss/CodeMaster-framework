@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace  Plutuss\SauceCore\Routing;
+namespace  Plutuss\CodeMaster\Routing;
 
 class RouteConfiguration implements RouteConfigurationInterface
 {

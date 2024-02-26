@@ -3,22 +3,22 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Container;
+namespace Plutuss\CodeMaster\Container;
 
 
-use Plutuss\SauceCore\Auth\Auth;
-use Plutuss\SauceCore\Builder\QueryBuilder;
-use Plutuss\SauceCore\Config\Config;
-use Plutuss\SauceCore\Database\Database;
-use Plutuss\SauceCore\Http\Redirect\Redirect;
-use Plutuss\SauceCore\Http\Request\Request;
-use Plutuss\SauceCore\Model\Model;
-use Plutuss\SauceCore\Routing\Router;
-use Plutuss\SauceCore\Session\Session;
-use Plutuss\SauceCore\Storage\Storage;
-use Plutuss\SauceCore\Validator\Validator;
-use Plutuss\SauceCore\View\View;
-use Plutuss\SauceCore\View\ViewBladeDirective;
+use Plutuss\CodeMaster\Auth\Auth;
+use Plutuss\CodeMaster\Builder\QueryBuilder;
+use Plutuss\CodeMaster\Config\Config;
+use Plutuss\CodeMaster\Database\Database;
+use Plutuss\CodeMaster\Http\Redirect\Redirect;
+use Plutuss\CodeMaster\Http\Request\Request;
+use Plutuss\CodeMaster\Model\Model;
+use Plutuss\CodeMaster\Routing\Router;
+use Plutuss\CodeMaster\Session\Session;
+use Plutuss\CodeMaster\Storage\Storage;
+use Plutuss\CodeMaster\Validator\Validator;
+use Plutuss\CodeMaster\View\View;
+use Plutuss\CodeMaster\View\ViewBladeDirective;
 use RyanChandler\Blade\Blade;
 use Symfony\Component\Dotenv\Dotenv;
 

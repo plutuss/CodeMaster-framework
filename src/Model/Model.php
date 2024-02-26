@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Plutuss\SauceCore\Model;
+namespace Plutuss\CodeMaster\Model;
 
-use Plutuss\SauceCore\Builder\QueryBuilderInterface;
+use Plutuss\CodeMaster\Builder\QueryBuilderInterface;
 
 
 class Model implements ModelInterface

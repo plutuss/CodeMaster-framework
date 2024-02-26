@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Builder;
+namespace Plutuss\CodeMaster\Builder;
 
 
-use Plutuss\SauceCore\Database\Database;
-use Plutuss\SauceCore\Exceptions\NotFoundException;
-use Plutuss\SauceCore\Model\Model;
+use Plutuss\CodeMaster\Database\Database;
+use Plutuss\CodeMaster\Exceptions\NotFoundException;
+use Plutuss\CodeMaster\Model\Model;
 
 class QueryBuilder extends Database implements QueryBuilderInterface
 {

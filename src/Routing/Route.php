@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Plutuss\SauceCore\Routing;
+namespace Plutuss\CodeMaster\Routing;
 
 class Route
 {

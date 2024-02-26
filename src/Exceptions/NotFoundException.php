@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Exceptions;
+namespace Plutuss\CodeMaster\Exceptions;
 
 
 class NotFoundException extends \Exception

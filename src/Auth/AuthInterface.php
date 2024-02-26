@@ -1,9 +1,9 @@
 <?php
 
-namespace Plutuss\SauceCore\Auth;
+namespace Plutuss\CodeMaster\Auth;
 
 
-use Plutuss\SauceCore\Model\Model;
+use Plutuss\CodeMaster\Model\Model;
 
 interface AuthInterface
 {
