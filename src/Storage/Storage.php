@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 
-namespace  Plutuss\SauceCore\Storage;
+namespace  Plutuss\CodeMaster\Storage;
 
-use Plutuss\SauceCore\Config\ConfigInterface;
+use Plutuss\CodeMaster\Config\ConfigInterface;
 
 readonly class Storage implements StorageInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutuss\SauceCore\Database;
+namespace Plutuss\CodeMaster\Database;
 
 interface DatabaseInterface
 {

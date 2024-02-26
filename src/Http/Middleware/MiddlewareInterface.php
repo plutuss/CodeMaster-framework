@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutuss\SauceCore\Http\Middleware;
+namespace Plutuss\CodeMaster\Http\Middleware;
 
 interface MiddlewareInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Plutuss\SauceCore\Config;
+namespace Plutuss\CodeMaster\Config;
 
-use const Plutuss\SauceCore\Config\APP_DIR;
+use const Plutuss\CodeMaster\Config\APP_DIR;
 
 class Config implements ConfigInterface
 {

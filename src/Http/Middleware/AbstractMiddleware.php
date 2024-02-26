@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Http\Middleware;
+namespace Plutuss\CodeMaster\Http\Middleware;
 
-use Plutuss\SauceCore\Auth\AuthInterface;
-use Plutuss\SauceCore\Http\Redirect\RedirectInterface;
-use Plutuss\SauceCore\Http\Request\RequestInterface;
+use Plutuss\CodeMaster\Auth\AuthInterface;
+use Plutuss\CodeMaster\Http\Redirect\RedirectInterface;
+use Plutuss\CodeMaster\Http\Request\RequestInterface;
 
 abstract class AbstractMiddleware
 {

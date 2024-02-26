@@ -1,11 +1,11 @@
 <?php
 
 
-use Plutuss\SauceCore\Config\Config;
-use Plutuss\SauceCore\Http\Redirect\Redirect;
-use Plutuss\SauceCore\Routing\Router;
-use Plutuss\SauceCore\Session\Session;
-use Plutuss\SauceCore\Support\Str;
+use Plutuss\CodeMaster\Config\Config;
+use Plutuss\CodeMaster\Http\Redirect\Redirect;
+use Plutuss\CodeMaster\Routing\Router;
+use Plutuss\CodeMaster\Session\Session;
+use Plutuss\CodeMaster\Support\Str;
 
 if (!function_exists('envt')) {
     /**

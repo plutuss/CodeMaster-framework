@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutuss\SauceCore\Validator;
+namespace Plutuss\CodeMaster\Validator;
 
 interface ValidatorInterface
 {

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Http\Middleware;
+namespace Plutuss\CodeMaster\Http\Middleware;
 
 
 class Middleware implements MiddlewareInterface

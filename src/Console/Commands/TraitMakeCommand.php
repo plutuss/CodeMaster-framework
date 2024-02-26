@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\Console\Commands;
+namespace Plutuss\CodeMaster\Console\Commands;
 
 
 trait TraitMakeCommand

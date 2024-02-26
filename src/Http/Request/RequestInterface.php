@@ -1,9 +1,9 @@
 <?php
 
-namespace  Plutuss\SauceCore\Http\Request;
+namespace  Plutuss\CodeMaster\Http\Request;
 
-use Plutuss\SauceCore\Upload\UploadedFileInterface;
-use Plutuss\SauceCore\Validator\Validator;
+use Plutuss\CodeMaster\Upload\UploadedFileInterface;
+use Plutuss\CodeMaster\Validator\Validator;
 
 interface RequestInterface
 {

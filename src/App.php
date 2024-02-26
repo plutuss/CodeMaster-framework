@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Plutuss\SauceCore;
+namespace Plutuss\CodeMaster;
 
-use Plutuss\SauceCore\Container\Container;
+use Plutuss\CodeMaster\Container\Container;
 
 class App
 {

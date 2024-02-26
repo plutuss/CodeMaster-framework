@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 
-namespace Plutuss\SauceCore\View;
+namespace Plutuss\CodeMaster\View;
 
-use Plutuss\SauceCore\Session\SessionInterface;
+use Plutuss\CodeMaster\Session\SessionInterface;
 use RyanChandler\Blade\Blade;
 
 readonly class View implements ViewInterface

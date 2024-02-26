@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace  Plutuss\SauceCore\Http\Redirect;
+namespace  Plutuss\CodeMaster\Http\Redirect;
 
-use Plutuss\SauceCore\Http\Request\RequestInterface;
+use Plutuss\CodeMaster\Http\Request\RequestInterface;
 
 class Redirect implements RedirectInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutuss\SauceCore\Session;
+namespace Plutuss\CodeMaster\Session;
 
 class Session implements SessionInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace  Plutuss\SauceCore\Model;
+namespace  Plutuss\CodeMaster\Model;
 
-use Plutuss\SauceCore\Builder\QueryBuilderInterface;
+use Plutuss\CodeMaster\Builder\QueryBuilderInterface;
 
 interface ModelInterface
 {
